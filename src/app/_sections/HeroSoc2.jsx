@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { SITE_CONFIG } from "@/lib/site-config";
 import { ArrowRight, CheckCircle2, Clock3 } from "lucide-react";
+import { GlowingDotGrid } from "@/components/ui/GlowingDotGrid";
 
 const TRUST_BADGES = [
   "SOC 2 Type II Ready",
@@ -28,15 +29,8 @@ const DASHBOARD_STATS = [
 export function HeroSoc2() {
   return (
     <section className="relative overflow-hidden bg-primary w-full pt-28 pb-0">
-      {/* Subtle dot grid */}
-      <div
-        className="absolute inset-0 opacity-[0.05]"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle, white 1px, transparent 1px)",
-          backgroundSize: "28px 28px",
-        }}
-      />
+      {/* Animated glowing dot grid */}
+      <GlowingDotGrid />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         {/* Label */}

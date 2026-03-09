@@ -4,25 +4,19 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/site-config";
+import { GlowingDotGrid } from "@/components/ui/GlowingDotGrid";
 
 const STATS = [
   { value: "500+", label: "Companies Certified" },
-  { value: "40+",  label: "Tool Integrations" },
+  { value: "40+", label: "Tool Integrations" },
   { value: "147+", label: "Automated Tests" },
-  { value: "50+",  label: "Frameworks" },
+  { value: "50+", label: "Frameworks" },
 ];
 
 export function Hero() {
   return (
     <section className="relative min-h-screen bg-primary flex items-center overflow-hidden">
-      {/* Subtle dot grid */}
-      <div
-        className="absolute inset-0 opacity-[0.06]"
-        style={{
-          backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)",
-          backgroundSize: "28px 28px",
-        }}
-      />
+      <GlowingDotGrid />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-40">
         <div className="max-w-3xl">
@@ -51,8 +45,8 @@ export function Hero() {
             className="text-lg text-white/55 leading-relaxed mb-10 max-w-xl"
           >
             Secov is a multi-tenant Security &amp; Compliance SaaS — a direct
-            alternative to Vanta, Drata, and Secureframe. 40+ integrations,
-            147+ automated checks, and 50+ frameworks in one platform.
+            alternative to Vanta, Drata, and Secureframe. 40+ integrations, 147+
+            automated checks, and 50+ frameworks in one platform.
           </motion.p>
 
           <motion.div
@@ -85,8 +79,12 @@ export function Hero() {
           >
             {STATS.map((s) => (
               <div key={s.label} className="bg-primary px-4 py-5 text-center">
-                <div className="text-2xl font-extrabold text-white tabular-nums">{s.value}</div>
-                <div className="text-xs text-white/35 mt-1 leading-tight">{s.label}</div>
+                <div className="text-2xl font-extrabold text-white tabular-nums">
+                  {s.value}
+                </div>
+                <div className="text-xs text-white/35 mt-1 leading-tight">
+                  {s.label}
+                </div>
               </div>
             ))}
           </motion.div>

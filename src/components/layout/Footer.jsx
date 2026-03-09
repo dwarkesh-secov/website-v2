@@ -99,7 +99,7 @@ export function Footer() {
             </nav>
 
             {/* SOC 2 badge */}
-            <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-white/5 border border-white/10">
+            {/* <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-white/5 border border-white/10">
               <div className="w-9 h-9 rounded-lg bg-white/8 border border-white/12 flex items-center justify-center shrink-0">
                 <Shield className="w-4 h-4 text-white/50" />
               </div>
@@ -111,7 +111,7 @@ export function Footer() {
                   We practice what we preach
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 

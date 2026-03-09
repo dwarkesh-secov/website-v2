@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight, CheckCircle2, ChevronRight } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/site-config";
+import { GlowingDotGrid } from "@/components/ui/GlowingDotGrid";
 
 function Counter({ to, suffix = "", duration = 1.6 }) {
   const [val, setVal] = useState(0);
@@ -32,7 +33,12 @@ function Counter({ to, suffix = "", duration = 1.6 }) {
     return () => io.disconnect();
   }, [to, duration]);
 
-  return <span ref={ref}>{val}{suffix}</span>;
+  return (
+    <span ref={ref}>
+      {val}
+      {suffix}
+    </span>
+  );
 }
 
 const CRITERIA = [
@@ -73,13 +79,21 @@ const TYPE_INFO = {
     period: "Point in time",
     timeline: "6–8 weeks",
     desc: "Evaluates whether controls are properly designed at a specific moment. The fastest path to a SOC 2 report.",
-    points: ["Control design evaluated", "Fastest to obtain", "Accepted by most enterprise buyers"],
+    points: [
+      "Control design evaluated",
+      "Fastest to obtain",
+      "Accepted by most enterprise buyers",
+    ],
   },
   II: {
     period: "3–12 months",
     timeline: "3–12 months",
     desc: "Tests operating effectiveness over a sustained period — the gold standard for enterprise and regulated markets.",
-    points: ["Operating effectiveness tested", "Highest level of assurance", "Required by Fortune 500 buyers"],
+    points: [
+      "Operating effectiveness tested",
+      "Highest level of assurance",
+      "Required by Fortune 500 buyers",
+    ],
   },
 };
 
@@ -89,18 +103,10 @@ export function Hero() {
 
   return (
     <section className="relative min-h-screen bg-primary flex items-center overflow-hidden">
-      {/* Subtle dot grid */}
-      <div
-        className="absolute inset-0 opacity-[0.06]"
-        style={{
-          backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)",
-          backgroundSize: "28px 28px",
-        }}
-      />
+      <GlowingDotGrid />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-40">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-
           {/* LEFT */}
           <div>
             <motion.p
@@ -118,7 +124,8 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.08 }}
               className="text-5xl md:text-[4.5rem] font-extrabold text-white tracking-tight leading-[1.06] mb-6"
             >
-              Get SOC 2 certified. <span className="text-white/50">Faster.</span>
+              Get SOC 2 certified.{" "}
+              <span className="text-white/50">Faster.</span>
             </motion.h1>
 
             <motion.p
@@ -210,15 +217,22 @@ export function Hero() {
                 transition={{ duration: 0.2 }}
               >
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-white/70 text-sm font-medium">{TYPE_INFO[activeType].period}</span>
+                  <span className="text-white/70 text-sm font-medium">
+                    {TYPE_INFO[activeType].period}
+                  </span>
                   <span className="text-[11px] font-semibold text-white/35 border border-white/12 px-2 py-0.5 rounded">
                     ~{TYPE_INFO[activeType].timeline}
                   </span>
                 </div>
-                <p className="text-white/45 text-sm leading-relaxed mb-4">{TYPE_INFO[activeType].desc}</p>
+                <p className="text-white/45 text-sm leading-relaxed mb-4">
+                  {TYPE_INFO[activeType].desc}
+                </p>
                 <ul className="space-y-2">
                   {TYPE_INFO[activeType].points.map((p) => (
-                    <li key={p} className="flex items-center gap-2.5 text-sm text-white/60">
+                    <li
+                      key={p}
+                      className="flex items-center gap-2.5 text-sm text-white/60"
+                    >
                       <ChevronRight className="w-3.5 h-3.5 text-white/30 shrink-0" />
                       {p}
                     </li>
@@ -239,16 +253,24 @@ export function Hero() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.4 + i * 0.06 }}
-                    onClick={() => setActiveCriteria(activeCriteria === c.code ? null : c.code)}
+                    onClick={() =>
+                      setActiveCriteria(
+                        activeCriteria === c.code ? null : c.code,
+                      )
+                    }
                     className={`w-full text-left rounded-xl transition-colors duration-150 overflow-hidden ${
-                      activeCriteria === c.code ? "bg-white/10" : "hover:bg-white/5"
+                      activeCriteria === c.code
+                        ? "bg-white/10"
+                        : "hover:bg-white/5"
                     }`}
                   >
                     <div className="flex items-center gap-3 px-3 py-2.5">
                       <span className="w-8 h-8 rounded-lg bg-white/8 border border-white/12 flex items-center justify-center text-[10px] font-black text-white/60 shrink-0">
                         {c.code}
                       </span>
-                      <span className="flex-1 text-white/70 font-medium text-sm text-left">{c.name}</span>
+                      <span className="flex-1 text-white/70 font-medium text-sm text-left">
+                        {c.name}
+                      </span>
                       <div className="flex items-center gap-2 shrink-0">
                         {c.required && (
                           <span className="text-[10px] font-bold text-white/40 border border-white/15 px-1.5 py-0.5 rounded">
