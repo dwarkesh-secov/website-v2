@@ -48,7 +48,7 @@ export function Cta() {
             className="flex flex-col sm:flex-row gap-3 justify-center"
           >
             <Link
-              href={SITE_CONFIG.demoUrl}
+              href="/talk-to-us"
               className="group inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-white text-primary font-bold text-sm hover:bg-slate-100 transition-colors"
             >
               Book a Free Consultation

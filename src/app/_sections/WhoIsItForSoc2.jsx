@@ -19,7 +19,7 @@ const PERSONAS = [
       "Audit-ready in as few as 21 days",
     ],
     cta: "Start Free Trial",
-    href: SITE_CONFIG.demoUrl,
+    href: "/talk-to-us",
     visual: (
       <div className="bg-white/5 border border-white/10 rounded-xl p-5">
         <div className="flex items-center justify-between mb-4">
@@ -59,7 +59,7 @@ const PERSONAS = [
       "Streamlined annual audit with pre-collected evidence",
     ],
     cta: "Book a Demo",
-    href: SITE_CONFIG.demoUrl,
+    href: "/talk-to-us",
     visual: (
       <div className="bg-slate-100 border border-slate-200 rounded-xl p-5">
         <div className="flex items-center justify-between mb-4">

@@ -12,6 +12,7 @@ const NAV_LINKS = [
   { href: "/soc-2", label: "SOC 2" },
   { href: "/pricing", label: "Pricing" },
   { href: "/about", label: "About" },
+  { href: "/talk-to-us", label: "Talk to us" },
 ];
 
 export function Header() {
@@ -84,7 +85,7 @@ export function Header() {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-3">
             <Link
-              href={SITE_CONFIG.demoUrl}
+              href="/talk-to-us"
               className={`group flex items-center gap-1.5 text-sm font-bold px-5 py-2.5 rounded-full transition-all ${
                 scrolled
                   ? "bg-primary text-white hover:bg-primary-light shadow-md shadow-primary/20"
@@ -170,7 +171,7 @@ export function Header() {
               className="relative z-10 px-6 pb-10 space-y-3 border-t border-white/8 pt-6"
             >
               <Link
-                href={SITE_CONFIG.demoUrl}
+              href="/talk-to-us"
                 onClick={close}
                 className="flex items-center justify-center gap-2 w-full py-4 rounded-xl bg-white text-primary font-bold text-base hover:bg-slate-100 transition-colors"
               >

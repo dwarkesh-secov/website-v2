@@ -146,7 +146,7 @@ export function Hero() {
               className="flex flex-col sm:flex-row gap-3 mb-14"
             >
               <Link
-                href={SITE_CONFIG.demoUrl}
+                href="/talk-to-us"
                 className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg bg-white text-primary font-bold text-sm hover:bg-slate-100 transition-colors"
               >
                 Request a Consultation

@@ -73,14 +73,14 @@ export function HeroSoc2() {
           className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-12"
         >
           <Link
-            href={SITE_CONFIG.demoUrl}
+            href="/talk-to-us"
             className="group flex items-center gap-2 px-7 py-3.5 rounded-lg bg-white text-primary font-bold text-sm hover:bg-slate-100 transition-colors whitespace-nowrap"
           >
             Start Free Trial
             <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
           </Link>
           <Link
-            href={SITE_CONFIG.demoUrl}
+            href="/talk-to-us"
             className="flex items-center gap-2 px-7 py-3.5 rounded-lg border border-white/20 text-white/70 font-semibold text-sm hover:border-white/40 hover:text-white transition-colors whitespace-nowrap"
           >
             Book a Demo

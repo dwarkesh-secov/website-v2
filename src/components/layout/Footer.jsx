@@ -36,7 +36,7 @@ export function Footer() {
             </p>
           </div>
           <Link
-            href={SITE_CONFIG.demoUrl}
+            href="/talk-to-us"
             className="group flex items-center gap-2 px-6 py-3 rounded-lg bg-white text-primary font-bold text-sm hover:bg-slate-100 transition-colors whitespace-nowrap shrink-0"
           >
             Get Started Free

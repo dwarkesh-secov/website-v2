@@ -15,7 +15,7 @@ const PLANS = [
     basePrice: 6500,
     note: "Up to 50 employees",
     cta: "Book a Demo",
-    href: SITE_CONFIG.demoUrl,
+    href: "/talk-to-us",
     features: [
       "SOC 2 Type I framework",
       "5 pre-built integrations",
@@ -37,7 +37,7 @@ const PLANS = [
     basePrice: 10500,
     note: "Up to 200 employees",
     cta: "Book a Demo",
-    href: SITE_CONFIG.demoUrl,
+    href: "/talk-to-us",
     popular: true,
     features: [
       "SOC 2 Type II",
@@ -68,7 +68,7 @@ const PLANS = [
     basePrice: null,
     note: "Unlimited employees",
     cta: "Talk to Sales",
-    href: SITE_CONFIG.demoUrl,
+    href: "/talk-to-us",
     features: [
       "SOC 2 Type I & Type II",
       "40+ integrations + custom API",
@@ -305,7 +305,7 @@ export function Plans() {
             : "All plans billed annually. Prices shown in USD."}{" "}
           Custom pricing available for larger organizations.{" "}
           <Link
-            href={SITE_CONFIG.demoUrl}
+            href="/talk-to-us"
             className="underline hover:text-slate-600 transition-colors"
           >
             Talk to us

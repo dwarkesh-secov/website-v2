@@ -68,14 +68,17 @@ export function WhoIsItFor() {
             </p>
             <ul className="space-y-3 mb-10">
               {STARTUP_POINTS.map((pt) => (
-                <li key={pt} className="flex items-center gap-3 text-sm text-white/60">
+                <li
+                  key={pt}
+                  className="flex items-center gap-3 text-sm text-white/60"
+                >
                   <CheckCircle2 className="w-4 h-4 text-white/30 shrink-0" />
                   {pt}
                 </li>
               ))}
             </ul>
             <Link
-              href={SITE_CONFIG.demoUrl}
+              href="/talk-to-us"
               className="group inline-flex items-center gap-2 text-white font-bold text-sm hover:text-white/70 transition-colors"
             >
               Start free
@@ -99,19 +102,22 @@ export function WhoIsItFor() {
             </h3>
             <p className="text-slate-500 leading-relaxed mb-8 text-sm">
               Already certified? Secov monitors your 40+ integrations 24/7,
-              collects evidence continuously, and sends instant alerts the moment
-              a control drifts out of compliance.
+              collects evidence continuously, and sends instant alerts the
+              moment a control drifts out of compliance.
             </p>
             <ul className="space-y-3 mb-10">
               {SCALEUP_POINTS.map((pt) => (
-                <li key={pt} className="flex items-center gap-3 text-sm text-slate-600">
+                <li
+                  key={pt}
+                  className="flex items-center gap-3 text-sm text-slate-600"
+                >
                   <CheckCircle2 className="w-4 h-4 text-slate-400 shrink-0" />
                   {pt}
                 </li>
               ))}
             </ul>
             <Link
-              href={SITE_CONFIG.demoUrl}
+              href="/talk-to-us"
               className="group inline-flex items-center gap-2 text-primary font-bold text-sm hover:text-slate-500 transition-colors"
             >
               See how it works
