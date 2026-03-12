@@ -35,8 +35,8 @@ export function Hero() {
             className="text-lg text-white/55 leading-relaxed max-w-2xl mx-auto"
           >
             Share your compliance goals and current approach, and we&apos;ll
-            walk you through how Secov can simplify audits, evidence
-            collection, and ongoing security operations.
+            walk you through how Secov can simplify audits, evidence collection,
+            and ongoing security operations.
           </motion.p>
         </div>
 
@@ -50,7 +50,7 @@ export function Hero() {
             <div
               className="calendly-inline-widget rounded-2xl overflow-hidden border border-white/10 shadow-lg bg-white relative z-20"
               data-url={`${SITE_CONFIG.demoUrl}?hide_gdpr_banner=1&background_color=ffffff&text_color=020617&primary_color=0f172a`}
-              style={{ height: "720px" }}
+              style={{ height: "820px" }}
             />
             <Script
               src="https://assets.calendly.com/assets/external/widget.js"
